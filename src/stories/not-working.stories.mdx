@@ -1,0 +1,29 @@
+import {Canvas, Meta, Story} from '@storybook/addon-docs';
+import ExampleAComponent from "./example-A.component";
+import ExampleBComponent from "./example-B.component";
+
+<Meta title="NOT WORKING" />
+
+# NOT WORKING
+
+Following the deprecation migration, I tried to do this :
+
+Should show h1 in rose color :
+
+export const exampleA = () => ({});
+
+<Canvas>
+  <Story name="First Component" height={"75px"} parameters={{ component: ExampleAComponent }}>
+    {exampleA.bind({})}
+  </Story>
+</Canvas>
+
+Should show h1 in blue color :
+
+export const exampleB = () => ({});
+
+<Canvas>
+  <Story name="Second Component" height={"75px"} parameters={{ component: ExampleBComponent }}>
+    {exampleB.bind({})}
+  </Story>
+</Canvas>
